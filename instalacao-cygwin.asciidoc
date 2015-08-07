@@ -4,7 +4,9 @@
 
 == Motivação
 
-A instalação do http://cygwin.com[Cygwin] no Windows oferece facilidade na instalação de várias ferramentas que serão utilizadas na montagem de um ambiente Java EE mais profissional. No contexto desse projeto (`javaee-ambiente`) ele é necessário para a execução de scripts (escritos em Bash) que automatizam a instalação e facilitam o uso de diversas ferramentas. Além disso, é através do Cygwin que são instalados o Git, o Vim, o Tmux, dentre outros.
+A instalação do http://cygwin.com[Cygwin] no Windows oferece facilidade na instalação de várias ferramentas. Por exemplo, eu utilizo-o para:
+
+* Montar um ambiente para o desenvolvimento de aplicações Java EE, utilizando o projeto http://github.com/paulojeronimo/javaee-ambiente[(javaee-ambiente)].
 
 == Instalação
 
@@ -68,9 +70,11 @@ LC_MESSAGES="pt_BR.UTF-8"
 LC_ALL=
 ----
 
+Para mais detalhes sobre a configuração de locales veja o link https://cygwin.com/cygwin-ug-net/setup-locale.html.
+
 == Instalação do apt-cyg
 
-O utilitário `apt-cyg` é um gerenciador de pacotes que funciona via linha de comando, assim como o `yum` (no Fedora) ou o `apt-get` (em distribuições derivadas do Debian). Reinicie novamente o Cygwin e execute:
+O utilitário https://github.com/transcode-open/apt-cyg[apt-cyg] é um gerenciador de pacotes que funciona via linha de comando, assim como o `yum` (no Fedora) ou o `apt-get` (em distribuições derivadas do Debian). Reinicie novamente o Cygwin e execute:
 
 [source,bash]
 ----
@@ -87,19 +91,12 @@ apt-cyg install git zip patch vim tree unzip procps
 
 == Procedimentos para remoção do Gygwin (instalado em C:/cygwin64)
 
-. Abrir o "Prompt de Comando (Admin)"
-. Executar os seguintes comandos:
+Abra o prompt de comandos como adminstrador "Prompt de Comando (Admin)" e execute os seguintes comandos:
+
 [source]
 ----
 takeown /f C:\cygwin64 /r /d Y
 icacls c:\cygwin64 /T /Q /C /reset
 rmdir /s /q C:\cygwin64
 ----
-
-== Referências
-
-* https://cygwin.com/cygwin-ug-net/setup-locale.html
-* https://github.com/transcode-open/apt-cyg
-* http://stackoverflow.com/questions/9260014/how-do-i-install-cygwin-components-from-the-command-line
-* http://jgoodall.me/posts/2013/05/29/git-use-https/
 
