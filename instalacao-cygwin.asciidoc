@@ -10,7 +10,7 @@ A instalação do http://cygwin.com[Cygwin] no Windows oferece facilidade na ins
 
 == Instalação
 
-Neste tutorial, será exemplificada a instalação da versão do Cygwin num Windows 64 bits. Há algumas maneiras de se realizar esse procedimento. Aqui será explicado como fazer a instalação manualmente ou, também, através do gerenciador de pacotes http://chololatey.org[Chocolatey] (modo preferido).
+Neste tutorial, será exemplificada a instalação da versão do Cygwin num Windows 64 bits. Há algumas maneiras de se realizar esse procedimento. Aqui será explicado como fazer a instalação manualmente ou, também, através do gerenciador de pacotes http://chocolatey.org[Chocolatey] (modo preferido).
 
 === Instalação Manual
 
