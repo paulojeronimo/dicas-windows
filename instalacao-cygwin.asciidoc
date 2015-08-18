@@ -10,7 +10,9 @@ A instalação do http://cygwin.com[Cygwin] no Windows oferece facilidade na ins
 
 == Instalação
 
-Neste tutorial, será exemplificada a instalação da versão do Cygwin num Windows 64 bits.
+Neste tutorial, será exemplificada a instalação da versão do Cygwin num Windows 64 bits. Há algumas maneiras de se realizar esse procedimento. Aqui será explicado como fazer a instalação manualmente ou, também, através do gerenciador de pacotes http://chololatey.org[Chocolatey] (modo preferido).
+
+=== Instalação Manual
 
 Faça o download do executável de instalação do Cygwin https://cygwin.com/setup-x86_64.exe[(setup-x86_64.exe)] para o diretório `Downloads` de teu usuário. 
 
@@ -25,6 +27,17 @@ Como sugestão para pasta local onde serão mantidos os downloads realizados pel
 
 Como sugestão de `mirror` de onde serão realizados os downloads do Cygwin utilize http://mirrors.kernel.org (se ele estiver disponível na lista apresentada).
 
+
+=== Instalação através do Chocolatey
+
+A instalação através do Chocolatey é mais simples e automatizada. Após ter realizado sua instalação, abra um prompt de comando como administador e execute os seguintes comandos:
+
+----
+choco install cygwin cyg-get
+cyg-get install wget
+----
+
+Após a instalação, o resultado Cygwin deverá estar instalado na pasta ``C:\tools\cygwin`` e seus pacotes deverão estar na pasta ``C:\tools\cygwin\packages``.
 
 == Mudança do HOME para o diretório apontado por USERPROFILE
 
@@ -86,10 +99,12 @@ install /tmp/apt-cyg /bin
 
 [source,bash]
 ----
-apt-cyg install git zip patch vim tree unzip procps
+apt-cyg install git zip patch vim tree unzip procps dos2unix tmux
 ----
 
-== Procedimentos para remoção do Gygwin (instalado em C:/cygwin64)
+== Procedimentos para remoção do Cygwin
+
+=== Remoção manual do Cygwin em C:/cygwin64
 
 Abra o prompt de comandos como adminstrador "Prompt de Comando (Admin)" e execute os seguintes comandos:
 
@@ -98,5 +113,11 @@ Abra o prompt de comandos como adminstrador "Prompt de Comando (Admin)" e execut
 takeown /f C:\cygwin64 /r /d Y
 icacls c:\cygwin64 /T /Q /C /reset
 rmdir /s /q C:\cygwin64
+----
+
+=== Remoção via Chocolatey
+
+----
+choco uninstall -y cyg-get cygwin
 ----
 
