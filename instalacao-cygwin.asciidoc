@@ -121,3 +121,22 @@ rmdir /s /q C:\cygwin64
 choco uninstall -y cyg-get cygwin
 ----
 
+== Dicas de configuração
+
+=== Inicialização automática do tmux
+
+[source,bash]
+----
+echo '[[ $TERM != screen ]] && eval tmux' >> ~/.bashrc
+----
+
+=== Criação do comando sudo
+
+[source,bash]
+----
+cat > /usr/local/bin/sudo <<'EOF'
+#!/usr/bin/bash
+cygstart --action=runas "$@"
+EOF
+chmod +x /usr/local/bin/sudo
+----
