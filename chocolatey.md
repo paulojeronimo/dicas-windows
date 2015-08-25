@@ -45,3 +45,9 @@ Instalação do [docker-machine](https://chocolatey.org/packages/docker-machine)
 ```
 choco install docker-machine --version 0.4.1 -y
 ```
+
+## Listagem de pacotes instalados
+
+```
+choco list -lo
+```
