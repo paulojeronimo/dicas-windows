@@ -102,6 +102,26 @@ install /tmp/apt-cyg /bin
 apt-cyg install git zip patch vim tree unzip procps dos2unix tmux
 ----
 
+== Outros pacotes
+
+=== Ruby
+
+[source,bash]
+----
+apt-cyg install ruby rubygems
+----
+
+=== Asdiidoctor
+
+Instale o Ruby (conforme os procedimentos acima) e, em seguida, instale o Asciidoctor via gems:
+
+[source,bash]
+----
+gem install asciidoctor
+----
+
+Ref.: http://discuss.asciidoctor.org/Asciidoctor-on-cygwin-td2374.html#a2620
+
 == Procedimentos para remoção do Cygwin
 
 === Remoção manual do Cygwin em C:/cygwin64
