@@ -1,4 +1,4 @@
-# Utilizando o Docker Machine no Windows
+# Instalação e uso do Docker Machine
 
 Documentação: https://docs.docker.com/installation/windows/
 
