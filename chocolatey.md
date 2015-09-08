@@ -20,6 +20,17 @@ iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.p
 
 ## Instalação de pacotes
 
+### Oracle JDK 8
+
+* Instalação:
+```
+choco install jdk8 -y
+```
+* Atualização:
+```
+choco upgrade jdk8 -y
+```
+
 ### VirtualBox e VirtualBox.ExtensionPack
 
 ```
