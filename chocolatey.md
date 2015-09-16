@@ -31,6 +31,15 @@ choco install jdk8 -y
 choco upgrade jdk8 -y
 ```
 
+### Oracle JRE 8
+
+* Necessário para a execução de applets (ex.: site do BB)
+* Página para teste: https://www.java.com/en/download/installed.jsp
+* Instalação da [versão v8.0.60](https://chocolatey.org/packages/jre8/8.0.60.20150902) (ainda não aprovada no repositório do Chocolatey no momento da escrita deste tópico)
+```
+choco install jre8 -y --version 8.0.60.20150902
+```
+
 ### VirtualBox e VirtualBox.ExtensionPack
 
 ```
