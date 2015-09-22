@@ -99,7 +99,7 @@ install /tmp/apt-cyg /bin
 
 [source,bash]
 ----
-apt-cyg install git zip patch vim tree unzip procps dos2unix tmux libxml2
+apt-cyg install git zip patch vim tree unzip procps dos2unix tmux libxml2 p7zip
 ----
 
 == Outros pacotes
