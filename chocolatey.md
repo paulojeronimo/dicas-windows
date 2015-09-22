@@ -46,6 +46,11 @@ choco install jre8 -y --version 8.0.60.20150902
 choco install virtualbox VirtualBox.ExtensionPack -y
 ```
 
+Talvez a versão mais atual do VirtualBox.ExtensionPack possa estar em estado de "waiting". Nessa situação, para baixá-la é possível executar o seguinte comando (exemplo):
+```
+choco install VirtualBox.ExtensionPack --version 5.0.4.102546 -y
+```
+
 ### Vagrant
 
 ```
